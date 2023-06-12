@@ -6,7 +6,7 @@ st.text('Luchi')
 st.text('Aloo dum')
 st.text('ghugni')
 
-st.title("my smoothie")
+st.title("My smoothie")
 
 # adding a new dataframe to the application page
 import pandas
