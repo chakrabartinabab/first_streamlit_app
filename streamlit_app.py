@@ -1,3 +1,5 @@
-import streamlit
+import streamlit as st
 
-streamlit.title('My Parents New healthy diner')
+st.title('My Parents New healthy diner')
+st.header('Lunch Menu')
+st.text('Luchi')
