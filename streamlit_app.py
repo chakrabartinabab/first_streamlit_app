@@ -28,6 +28,8 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #putting it in table form
 st.dataframe(fruityvice_normalized)
 
+st.stop()
+
 import snowflake.connector
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
 my_cur = my_cnx.cursor()
