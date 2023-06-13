@@ -39,7 +39,7 @@ except URLError as e:
 # normalizing the data 
 
 
-#st.stop()
+st.stop()
 
 #import snowflake.connector
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
