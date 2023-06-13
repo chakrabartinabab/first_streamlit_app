@@ -30,6 +30,8 @@ try:
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
     st.dataframe(fruityvice_normalized)
 
+except URLError as e
+st.error()
 #import requests
 
 #st.text(fruityvice_response.json())--commenting it out to remove from output screen
@@ -37,7 +39,7 @@ try:
 # normalizing the data 
 
 
-st.stop()
+#st.stop()
 
 #import snowflake.connector
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
