@@ -21,17 +21,21 @@ st.dataframe(fruits_to_show)
 
 # new section
 st.header("Fruityvice Fruit Advice!")
-fruit_choice = st.text_input('What fruit would you like information about?','Kiwi')
-st.write('The user entered ', fruit_choice)
+try:
+   fruit_choice = st.text_input('What fruit would you like information about?')
+   if not fruit_choice:
+    st.error("Please select a fruit to get information.")
+   else:
+    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "fruit_choice")
+    fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+    st.dataframe(fruityvice_normalized)
 
 #import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+
 #st.text(fruityvice_response.json())--commenting it out to remove from output screen
 
 # normalizing the data 
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-#putting it in table form
-st.dataframe(fruityvice_normalized)
+
 
 st.stop()
 
