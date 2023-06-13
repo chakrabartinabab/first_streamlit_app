@@ -31,7 +31,7 @@ try:
     st.dataframe(fruityvice_normalized)
 
 except URLError as e:
-st.error()
+   st.error()
 #import requests
 
 #st.text(fruityvice_response.json())--commenting it out to remove from output screen
